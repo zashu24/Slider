@@ -1,0 +1,112 @@
+fieldset.meter{
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 440px;
+	position: relative; /*Requried if want to use slider div*/
+}
+
+.meter label{
+	float: left;
+	margin: 0 30px;
+	text-align: center;
+	margin-top: 20px;
+	width: 50px;
+	position: relative; 
+}
+
+.meter label:before{
+	border-left: 1px solid #9F9F9F;
+	content: "";
+	display: block;
+	height: 11px;
+	left: 50%;
+	position: absolute;
+	top: -20px;
+}
+
+.meter label span{
+	display: block;
+}
+
+.meter .thermometer{
+	border: 1px solid #9F9F9F;
+}
+
+.meter .thermometer .mercury{
+	height: 10px;
+	width: 55px;
+	background: #008808;
+	transition: width 0.5s; /* For animation. didnt added browsers prefixes */
+}
+
+.checked + label + label + .thermometer .mercury{
+	width: 165px;
+}
+.checked + label + .thermometer .mercury{
+	width: 275px;
+}
+.checked + .thermometer .mercury{
+	width: 100%;
+}
+
+/******************************
+Start - Slider Div CSS 
+******************************/
+.meter .slider{
+	width:30px;
+	height: 17px;
+	font-size:14px;
+	line-height: 14px;
+	border: 1px solid #008808;
+	background: #fff;
+	position: absolute;
+	top:-4px;
+	left:40px;
+	color:#008808;
+	transition: left 0.5s;
+}
+
+.meter .slider::after {
+    content: "||";
+    display: block;
+    margin-left: 13px;
+    margin-top: 3px;
+}
+.checked + label + label + .thermometer + .slider{
+	left: 150px;
+}
+.checked + label + .thermometer + .slider{
+	left: 260px;
+}
+.checked + .thermometer + .slider{
+	left: 370px;
+}
+/******************************
+End - Slider Div CSS 
+******************************/
+
+
+
+
+/*  Start - Slider alternate CSS
+.meter .checked:after{
+	width:30px;
+	height: 16px;
+	font-size:14px;
+	border: 1px solid #008808;
+	background: #fff;
+	content: "||";
+	color:#008808;
+	display: block;
+	padding-top: 1px;
+	position: absolute;
+	top:-24px;
+	left:10px;
+}
+End- Slider Alternet CSS*/
+
+
+
+
+

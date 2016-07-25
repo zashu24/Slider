@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Radio Slider</title>
+		<link rel="stylesheet" href="assets/meter.css" />
+	</head>
+	<body>
+
+		<h1>Slider</h1>
+		<form action="">
+			<fieldset class="meter">
+				<label for="setTo0" class="checked">
+					<span>ZERO</span>
+					<input type="radio" name="temperature" id="setTo0" checked="checked" />
+				</label>
+				<label for="setTo1">
+					<span>ONE</span>
+					<input type="radio" name="temperature" id="setTo1" />
+				</label>
+				<label for="setTo2">
+					<span>TWO</span>
+					<input type="radio" name="temperature" id="setTo2" />
+				</label>
+				<label for="setTo3">
+					<span>THREE</span>
+					<input type="radio" name="temperature" id="setTo3" />
+				</label>
+				<div class="thermometer">
+					<div class="mercury"></div>
+				</div>
+				<div class="slider"></div>
+			</fieldset>
+		</form>
+
+
+		<script type="text/javascript" src="assets/meter.js"></script>
+
+
+<br /><br /><br /><br />
+<h2>Assumptions</h2>
+<ul>
+	<li>Assuming its fixed widthed widget with only 4 options. If want to make it reusable for multiple values then need to change all width in percentage(including margin)</li>
+	<li>Assuming not allowed to make any HTML changes so used CSS after and before to avoid any image usage</li>
+	<li>Assuming that i should try to avoid usage of any image.</li>
+	<li>Assuming i should avoid usage of any framework other then jquery. infact for this code i am not using jquery. with Jquery could not have much lines.</li>
+	<li>Assuming radio value should change only when someone click on rectangle created by label and radio button. so using margin to make noclickable space between labels </li>
+	<li>When three is selected making whole thermometer green. which behaviour is different then other choices when green part ends under slider.</li>
+	<li>Assuming that use of slider div is mandatory. <b>commented the CSS code which works fine without use of slider div.</b> Alternet CSS commented properly so you can switch blocks and see the result </li>
+	<li>Assuming having CSS animation for supporting borwsers would be good. since its not part of requirements not implemeting any work around for IE8</li>
+</ul>
+
+
+
+	</body>
+</html>
+
+
+
+
